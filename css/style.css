@@ -1,0 +1,19 @@
+/* ! header & main visual */
+header {
+    position: absolute;
+    top: 60px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+header img{
+    max-width: 1142px;
+    width: 100%;
+}
+
+.main_visual video{
+    object-fit: cover;
+    width: 100%;
+    height: 100vh;
+    vertical-align: middle;
+}

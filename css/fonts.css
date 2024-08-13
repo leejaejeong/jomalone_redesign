@@ -1,0 +1,13 @@
+@font-face {
+    font-family: "Perpetua Titling-li";
+    font-weight: light;
+    src: url("../fonts/pertili.woff") format("woff");
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Perpetua Titling-bd";
+    font-weight: bold;
+    src: url("../fonts/pertibd.woff") format("woff");
+    font-style: normal;
+}
