@@ -1,0 +1,21 @@
+:root{
+    /*! color */
+    --color-black:#222;
+}
+
+h1, h2, h3, h4, h5, p, span{
+    color: var(--color-black);
+}
+
+a{
+    letter-spacing: 0.5rem;
+    color: #fff;
+    font-family: 'Pretendard-Regular';
+    background-color: var(--color-black);
+}
+
+body{
+    background-image: url('../imgs/jomalone_back_texture.png');
+    background-blend-mode : multiply;
+    background-color: #FCF9EE;
+}
