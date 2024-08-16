@@ -13,7 +13,23 @@ header img{
     width: 100%;
 }
 
+.main_visual{
+    position: relative;
+    width: 100%;
+    height: 100vh;
+}
+
+.main_visual .main_visual_wrap{
+    clip: rect(0, auto, auto, 0);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
 .main_visual video{
+    position: fixed;
     object-fit: cover;
     width: 100%;
     height: 100vh;
@@ -31,6 +47,10 @@ header img{
     text-align: center;
 }
 
+.intro_sec .sec_tit > div{
+    overflow: hidden;
+}
+
 .intro_sec h2{
     margin: 0 0 30px 0;
     font-size: 8.75rem; /*140px*/
@@ -46,10 +66,12 @@ header img{
 .intro_sec .purchase_container .img_box{
     max-width: 711px;
     margin: 0 auto 35px auto;
+    overflow: hidden;
 }
 
 .intro_sec .purchase_container .img_box img{
     width: 100%;
+    transform: scale(1);
 }
 
 .intro_sec .purchase_container h5{
@@ -82,11 +104,15 @@ header img{
     background-size: cover;
 }
 
-.wsss_bnr p{
+.wsss_bnr > div{
     position: absolute;
     top:50%;
     right: 12%;
     transform: translateY(-50%);
+    overflow: hidden;
+}
+
+.wsss_bnr p{
     font-size: 1.75rem;
     font-family: "Noto Serif KR", serif;
     line-height: 1.5;
@@ -121,20 +147,18 @@ header img{
 
 .contents_sec .fix_container{
     position: sticky;
-    top: 50%;
+    top: 0;
     align-self: self-start;
     flex: 1;
 } 
 
-.contents_sec .fix_container > p{
+.contents_sec .fix_container p{
+    padding:45% 200px;
+    box-sizing: border-box;
     font-size: 2rem;
     font-family: "Noto Serif KR", serif;
     line-height: 1.5;
     font-weight: 300;
-}
-
-.contents_sec .content01 p{
-    padding: 0 0 0 200px;
 }
 
 .contents_sec .content02{
@@ -146,12 +170,13 @@ header img{
 
 .fragrance_sec .note_container{
     position: relative;
-    margin: 230px 0;
+    margin: 230px 0 600px 0;
 }
 
 .fragrance_sec .note_container > h2{
     position: absolute;
-    top: 0;
+    top: 50%;
+    transform: translateY(-50%);
     font-size: 8.75rem;
     font-family: "Perpetua Titling-li";
 }
@@ -166,6 +191,7 @@ header img{
 
 .fragrance_sec .note_container > .desc_box{
     position: relative;
+    top: 200px;
 }
 
 .fragrance_sec .note_container > .desc_box .img_box{
@@ -199,16 +225,16 @@ header img{
 
 .fragrance_sec .note_container > .illust_img_box{
     position: absolute;
-    bottom: -20%;
+    bottom: -64%;
     max-width: 278px;
 }
 
 .fragrance_sec .note_container:not(.heart_note_container) > .illust_img_box{
-    right: 12%;
+    right: 15%;
 }
 
 .fragrance_sec .heart_note_container > .illust_img_box{
-    left: 12%;
+    left: 15%;
 }
 
 .fragrance_sec .note_container > .illust_img_box img{

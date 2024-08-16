@@ -11,9 +11,18 @@ h1, h2, h3, h4, h5, p, span{
 .item_tab_sec .item_list ul li .btn_box a,
 .other_collections .btn_box a{
     letter-spacing: 0.5rem;
-    color: #fff;
     font-family: 'Pretendard-Regular';
+    color: #fff;
+    border: 3px solid var(--color-black);
     background-color: var(--color-black);
+    transition: 0.3s;
+}
+
+.intro_sec .purchase_container a:hover,
+.item_tab_sec .item_list ul li .btn_box a:hover,
+.other_collections .btn_box a:hover{
+    color: var(--color-black);
+    background-color: transparent;
 }
 
 body{

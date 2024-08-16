@@ -13,6 +13,8 @@
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/fonts.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.0/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/ScrollTrigger.min.js"></script>
 </head>
 
 <body>
@@ -24,14 +26,20 @@
     <div class="wrap">
         <!-- ! main visual -->
         <div class="main_visual">
-            <video src="videos/jomalone_main_visual_short_video.mp4" autoplay muted loop playsinline></video>
+            <div class="main_visual_wrap">
+                <video src="videos/jomalone_main_visual_short_video.mp4" autoplay muted loop playsinline></video>
+            </div>
         </div>
 
         <!-- ! wsss intro title -->
         <section class="sec intro_sec">
             <div class="sec_tit">
-                <h2>Wood Sage & Sea Salt</h2>
-                <h3>영국 해안가의 청량한 공기를 들이켜보세요.</h3>
+                <div>
+                    <h2>Wood Sage & Sea Salt</h2>
+                </div>
+                <div>
+                    <h3>영국 해안가의 청량한 공기를 들이켜보세요.</h3>
+                </div>
             </div>
             <div class="purchase_container">
                 <div class="img_box">
@@ -52,10 +60,12 @@
 
         <!-- ! wsss banner -->
         <div class="wsss_bnr">
-            <p>
-                소금기를 머금은 바다 공기가 감싼 해변과<br>
-                험준한 절벽의 미네랄 향이 살아 숨 쉬는 곳.
-            </p>
+            <div>
+                <p>
+                    소금기를 머금은 바다 공기가 감싼 해변과<br>
+                    험준한 절벽의 미네랄 향이 살아 숨 쉬는 곳.
+                </p>
+            </div>
         </div>
         <!-- ! wsss contents -->
         <section class="sec contents_sec">
