@@ -1,13 +1,15 @@
 :root{
     /*! color */
-    --color-black:#222;
+    --color-black:#222222;
 }
 
 h1, h2, h3, h4, h5, p, span{
     color: var(--color-black);
 }
 
-a{
+.intro_sec .purchase_container a,
+.item_tab_sec .item_list ul li .btn_box a,
+.other_collections .btn_box a{
     letter-spacing: 0.5rem;
     color: #fff;
     font-family: 'Pretendard-Regular';
@@ -18,4 +20,70 @@ body{
     background-image: url('../imgs/jomalone_back_texture.png');
     background-blend-mode : multiply;
     background-color: #FCF9EE;
+}
+
+
+/*! footer */
+footer{
+    padding: 100px 195px;
+    border-top: 10px solid var(--color-black);
+}
+
+footer .corp_info{
+    display: flex;
+    justify-content: space-between;
+    margin: 0 0 100px 0;
+}
+
+footer .corp_info > ul{
+    flex: 0.8;
+    display: flex;
+    justify-content: space-between;
+}
+
+footer .corp_info > ul > li h5{
+    margin: 0 0 30px 0;
+    font-size: 0.875rem;
+    font-family: 'Pretendard-SemiBold';
+}
+
+footer .corp_info > ul ul li{
+    margin: 0 0 20px 0;
+}
+
+footer .corp_info > ul ul li a{
+    font-size: 0.875rem;
+    font-family: 'Pretendard-Regular';
+}
+
+footer .corp_info > ul ul li a:hover{
+    text-decoration: underline;
+}
+
+footer .corp_info img{
+    width: 100%;
+    cursor: pointer;
+}
+
+footer .privacy_policy{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 0 0 0;
+    border-top: 1px solid var(--color-black);
+}
+
+footer .privacy_policy ul{
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+footer .privacy_policy ul a{
+    font-size: 0.875rem;
+    font-family: 'Pretendard-Light';
+}
+
+footer .privacy_policy ul a:hover{
+    text-decoration: underline;
 }
