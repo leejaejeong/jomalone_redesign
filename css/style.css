@@ -261,6 +261,10 @@ header img{
     border: 1.5px solid var(--color-black);
 }
 
+.item_tab_sec .tab_btn_list a.active{
+    background-color: var(--color-black);
+}
+
 .item_tab_sec .tab_btn_list a span{
     display: block;
     font-family: "Perpetua Titling-li";
@@ -273,6 +277,10 @@ header img{
     font-family: "Noto Serif KR", serif;
     font-weight: 300;
     line-height: 1.5;
+}
+
+.item_tab_sec .tab_btn_list a.active span{
+    color: #fff;
 }
 
 .item_tab_sec .item_list img{
@@ -300,6 +308,15 @@ header img{
 }
 
 .item_tab_sec .item_list ul li:not(:first-child){
+    border-left: none;
+}
+
+.item_tab_sec .item_list ul li:nth-child(n + 5){
+    border: 0.5px solid var(--color-black);
+    border-top: none;
+}
+
+.item_tab_sec .item_list ul li:nth-child(n + 5):not(:nth-child(5)){
     border-left: none;
 }
 
@@ -337,8 +354,20 @@ header img{
 
 .item_tab_sec .item_list ul li .btn_box a{
     padding: 30px 0;
+    box-sizing: border-box;
     width: 100%;
     text-align: center;
+    color: var(--color-black);
+    background-color: transparent;
+    border-top: 1px solid var(--color-black); 
+    border-left: none;
+    border-right: none;
+    border-bottom: none;
+}
+
+.item_tab_sec .item_list ul li:hover .btn_box a{
+    color: #fff;
+    background-color: var(--color-black);
 }
 
 
@@ -352,14 +381,27 @@ header img{
     justify-content: space-between;
     align-items: center;
     margin: 0 0 100px 0;
-}
-
-.other_collections .collections_bnr > div > .img_box img{
-    width: 100%;
+    cursor: pointer;
 }
 
 .other_collections .collections_bnr > div{
     position: relative;
+    overflow: hidden;
+}
+
+.other_collections .collections_bnr > div > .img_box{
+    background-color: var(--color-black);
+}
+
+.other_collections .collections_bnr > div > .img_box img{
+    width: 100%;
+    vertical-align: middle;
+    opacity: 0.7;
+    transition: 0.5s;
+}
+
+.other_collections .collections_bnr > div:hover > .img_box img{
+    opacity: 1;
 }
 
 .other_collections .collections_bnr .txt_box{
@@ -367,12 +409,17 @@ header img{
     justify-content: space-between;
     align-items: center;
     position: absolute;
-    bottom: 0;
+    bottom: -50%;
     left: 0;
     padding: 28px 60px;
     box-sizing: border-box;
     width: 100%;
     background-color: rgba(34, 34, 34, 0.5);
+    transition: 0.5s;
+}
+
+.other_collections .collections_bnr > div:hover > .txt_box{
+    bottom: 0;
 }
 
 .other_collections .collections_bnr .txt_box h5{

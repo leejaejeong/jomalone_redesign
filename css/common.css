@@ -19,7 +19,6 @@ h1, h2, h3, h4, h5, p, span{
 }
 
 .intro_sec .purchase_container a:hover,
-.item_tab_sec .item_list ul li .btn_box a:hover,
 .other_collections .btn_box a:hover{
     color: var(--color-black);
     background-color: transparent;
