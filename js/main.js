@@ -17,7 +17,6 @@ $(document).ready(function () {
             start: "0% 100%",
         },
         y: 200,
-        delay: 0.3,
         duration: 1,
     })
 
@@ -47,21 +46,24 @@ $(document).ready(function () {
     })
 
     // ! wsss fragrance note
+    
+
     var fragranceNote01 = gsap
         .timeline({
             scrollTrigger: {
                 trigger: ".top_note_container h2",
-                start: "0% 60%",
+                start: "0% 80%",
                 end: "+=150",
                 scrub: 3,
             }
         })
     fragranceNote01.fromTo(".top_note_container h2", {
+        y: 150,
+        opacity: 0,
+        duration: 1,
+    }, {
         y: -150,
         opacity: 1,
-    }, {
-        y: 150,
-        opacity: 0.5,
         duration: 1,
     });
     fragranceNote01.fromTo(".top_note_container .illust_img_box", {
@@ -76,17 +78,18 @@ $(document).ready(function () {
         .timeline({
             scrollTrigger: {
                 trigger: ".heart_note_container h2",
-                start: "0% 20%",
+                start: "0% 80%",
                 end: "+=150",
                 scrub: 3,
             }
         })
     fragranceNote02.fromTo(".heart_note_container h2", {
+        y: 150,
+        opacity: 0,
+        duration: 1,
+    }, {
         y: -150,
         opacity: 1,
-    }, {
-        y: 150,
-        opacity: 0.5,
         duration: 1,
     });
     fragranceNote02.fromTo(".heart_note_container .illust_img_box", {
@@ -101,17 +104,18 @@ $(document).ready(function () {
         .timeline({
             scrollTrigger: {
                 trigger: ".base_note_container h2",
-                start: "0% 20%",
+                start: "0% 80%",
                 end: "+=150",
                 scrub: 3,
             }
         })
     fragranceNote03.fromTo(".base_note_container h2", {
+        y: 150,
+        opacity: 0,
+        duration: 1,
+    }, {
         y: -150,
         opacity: 1,
-    }, {
-        y: 150,
-        opacity: 0.5,
         duration: 1,
     });
     fragranceNote03.fromTo(".base_note_container .illust_img_box", {
@@ -122,15 +126,33 @@ $(document).ready(function () {
     })
 
     // ! item list tab menu
-    $(function(){
+    $(function () {
         $('.tab_contents > div').hide(); //일단 탭 컨텐츠 전체를 숨김
-        $('.tab_btn_list a').click(function(){ //a태그를 클릭하면 이벤트가 일어남
-          $('.tab_contents > div').hide().filter(this.hash).fadeIn();  
-             //선택한 요소 중 해당요소가 있으면 페이드 인으로 나타나라
-             
-          $('.tab_btn_list a').removeClass('active');
-          $(this).addClass('active');
-          return false; //이벤트가 끝났다는 것을 알려줌 (혹시 모를 에러를 방지하기 위해)
+        $('.tab_btn_list a').click(function () { //a태그를 클릭하면 이벤트가 일어남
+            $('.tab_contents > div').hide().filter(this.hash).fadeIn();
+            //선택한 요소 중 해당요소가 있으면 페이드 인으로 나타나라
+
+            $('.tab_btn_list a').removeClass('active');
+            $(this).addClass('active');
+            return false; //이벤트가 끝났다는 것을 알려줌 (혹시 모를 에러를 방지하기 위해)
         }).filter(':eq(0)').click(); //이미 클릭되어진 상태를 만들기 위해 사용
-      })
+    })
 })
+
+// ! footer
+
+ $('.m_footer .f_menu_list > li > ul').slideUp();
+ $('.m_footer .f_menu_list > li > div').click(function(){
+    $('.m_footer .f_menu_list > li').removeClass('active');
+    $('.m_footer .f_menu_list > li > ul').slideUp();
+    if($(this).hasClass('active')){
+        $(this).siblings().removeClass('active');
+        $(this).removeClass('active');
+    } else {
+        $(this).siblings().slideDown(300);    
+        $(this).siblings().addClass('active');
+        $(this).addClass('active');
+    }
+});
+ 
+    
