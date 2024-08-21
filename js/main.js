@@ -45,9 +45,8 @@ $(document).ready(function () {
         duration: 1,
     })
 
-    // ! wsss fragrance note
-    
 
+    // ! wsss fragrance note
     var fragranceNote01 = gsap
         .timeline({
             scrollTrigger: {
@@ -62,12 +61,13 @@ $(document).ready(function () {
         opacity: 0,
         duration: 1,
     }, {
-        y: -150,
+        y: -30,
         opacity: 1,
         duration: 1,
     });
     fragranceNote01.fromTo(".top_note_container .illust_img_box", {
         opacity: 0,
+        y: 30,
     }, {
         opacity: 1,
         y: -30,
@@ -88,12 +88,13 @@ $(document).ready(function () {
         opacity: 0,
         duration: 1,
     }, {
-        y: -150,
+        y: -30,
         opacity: 1,
         duration: 1,
     });
     fragranceNote02.fromTo(".heart_note_container .illust_img_box", {
         opacity: 0,
+        y: 30,
     }, {
         opacity: 1,
         y: -30,
@@ -114,12 +115,13 @@ $(document).ready(function () {
         opacity: 0,
         duration: 1,
     }, {
-        y: -150,
+        y: -30,
         opacity: 1,
         duration: 1,
     });
     fragranceNote03.fromTo(".base_note_container .illust_img_box", {
         opacity: 0,
+        y: 30,
     }, {
         opacity: 1,
         y: -30,

@@ -220,6 +220,9 @@ header img {
     align-self: self-start;
     flex: 1;
     width: 100%;
+    background-image: url('../imgs/jomalone_back_texture.png');
+    background-blend-mode: multiply;
+    background-color: #F9F4E1;
 }
 
 .contents_sec .fix_container p {
@@ -252,12 +255,12 @@ header img {
     .contents_sec .fix_container {
         background-image: url('../imgs/jomalone_back_texture.png');
         background-blend-mode: multiply;
-        background-color: #FCF9EE;
+        background-color: #F9F4E1;
         z-index: 100;
     }
 
     .contents_sec .fix_container p {
-        padding: 30% 15px 10% 15px;
+        padding: 28% 15px 10% 15px;
     }
 
     .contents_sec .content02 .img_box img {
@@ -281,29 +284,26 @@ header img {
 
 
 /* ! fragrance_sec */
+.fragrance_sec{
+    padding: 0 40px;
+}
+
 .fragrance_sec .note_container {
     position: relative;
-    margin: 230px 0 600px 0;
+    margin: 230px 0 400px 0;
 }
 
 .fragrance_sec .note_container>h2 {
-    position: absolute;
-    top: 50%;
     font-size: 8.75rem;
     font-family: "Perpetua Titling-li";
 }
 
-.fragrance_sec .note_container:not(.heart_note_container)>h2 {
-    left: 3%;
-}
-
-.fragrance_sec .heart_note_container>h2 {
-    right: 3%;
+.fragrance_sec .heart_note_container>h2{
+    text-align: right;
 }
 
 .fragrance_sec .note_container>.desc_box {
     position: relative;
-    top: 200px;
 }
 
 .fragrance_sec .note_container>.desc_box .img_box {
@@ -337,20 +337,17 @@ header img {
 }
 
 .fragrance_sec .note_container>.illust_img_box {
-    position: absolute;
-    bottom: -64%;
-    max-width: 278px;
-}
-
-.fragrance_sec .note_container:not(.heart_note_container)>.illust_img_box {
-    right: 15%;
+    text-align: right;
+    margin: -8% 13% 0 0;
 }
 
 .fragrance_sec .heart_note_container>.illust_img_box {
-    left: 15%;
+    text-align: left;
+    margin: -8% 0 0 13%;
 }
 
 .fragrance_sec .note_container>.illust_img_box img {
+    max-width: 278px;
     width: 100%;
 }
 
@@ -360,25 +357,23 @@ header img {
     }
 
     .fragrance_sec .note_container>.illust_img_box {
-        bottom: -93%;
+        text-align: right;
+        margin: -13% 0 0 0;
     }
-
-    .fragrance_sec .note_container:not(.heart_note_container)>.illust_img_box {
-        right: 0;
-    }
-
+    
     .fragrance_sec .heart_note_container>.illust_img_box {
-        left: 0;
+        text-align: left;
+        margin: -17% 0 0 0;
     }
 }
 
 @media(max-width:768px) {
     .fragrance_sec{
-        padding: 0 15px 100px 15px;
+        padding: 0 15px 0 15px;
     }
 
     .fragrance_sec .note_container{
-        margin: 230px 0 300px 0;
+        margin: 230px 0 100px 0;
     }
 
     .fragrance_sec .note_container>h2 {
@@ -395,8 +390,15 @@ header img {
     }
 
     .fragrance_sec .note_container>.illust_img_box {
-        bottom: -138%;
-        max-width: 188px;
+        margin: -25% 0 0 0;
+    }
+    
+    .fragrance_sec .heart_note_container>.illust_img_box {
+        margin: -28% 0 0 -5%;
+    }
+
+    .fragrance_sec .note_container>.illust_img_box img{
+        max-width: 239px;
     }
 }
 
