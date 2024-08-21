@@ -185,3 +185,24 @@ footer .privacy_policy ul a:hover{
         gap: 20px;
     }
 }
+
+/*! scroll top btn */
+.top_btn{
+    position: fixed;
+    bottom: 40px;
+    right: 40px;
+    z-index: 100;
+    cursor: pointer;
+}
+
+.top_btn img{
+    max-width: 50px;
+    width: 100%;
+}
+
+@media(max-width:768px){
+    .top_btn{
+        bottom: 30px;
+        right: 20px;
+    }
+}

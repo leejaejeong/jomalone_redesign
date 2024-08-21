@@ -142,7 +142,6 @@ $(document).ready(function () {
 })
 
 // ! footer
-
  $('.m_footer .f_menu_list > li > ul').slideUp();
  $('.m_footer .f_menu_list > li > div').click(function(){
     $('.m_footer .f_menu_list > li').removeClass('active');
@@ -155,6 +154,12 @@ $(document).ready(function () {
         $(this).siblings().addClass('active');
         $(this).addClass('active');
     }
+});
+
+
+// ! scroll top btn
+$('.top_btn').click(function(){
+    $('html, body').animate({scrollTop : 0}, 400);
 });
  
     
